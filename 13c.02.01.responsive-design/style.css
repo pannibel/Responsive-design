@@ -1,0 +1,497 @@
+/* Tip, copy paste from 13c.01.01 & 13c.01.02 to get fonts and colors up and running ... */
+@import url("https://use.typekit.net/xay8pxg.css");
+
+/* Resetter */
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+/* Color Properties */
+:root {
+  --color-darker: rgb(0, 0, 0);
+  --color-dark: rgb(165, 148, 118);
+  --color-light: rgb(236, 225, 204);
+  --color-lighter: rgb(251, 248, 238);
+  /* you could add an accent color for CTAs and anchor tags ;-) */
+
+  --font-xxsmall: 0.8rem;
+  --font-xsmall: 1rem;
+  --font-small: 1.25rem;
+  --font-medium: 1.563rem;
+  --font-large: 1.953rem;
+  --font-xlarge: 2.441rem;
+  --font-xxlarge: 3.052rem;
+
+  --font-primary: "roc-grotesk-wide", sans-serif;
+  --font-secondary: "coolvetica", sans-serif;
+}
+
+/* Fonts */
+html {
+  font-size: 18px;
+}
+
+h1, h2, h3 {
+  color: var(--color-dark);
+}
+
+h1 {
+  font-family: var(--font-primary);
+  font-size: var(--font-xlarge);
+  font-weight: 800;
+  line-height: var(--font-xlarge);
+  text-transform: uppercase;
+  margin-bottom: var(--font-small);
+}
+
+h2 {
+  font-family: var(--font-primary);
+  font-size: var(--font-large);
+  font-weight: 700;
+  line-height: var(--font-xlarge);
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: var(--font-primary);
+  font-size: var(--font-medium);
+  font-weight: 600;
+  line-height: var(--font-large);
+  text-transform: uppercase;
+}
+
+p, label, li {
+  color: var(--color-dark);
+  font-family: var(--font-secondary);
+  font-size: var(--font-xsmall);
+  font-weight: 700;
+  line-height: var(--font-medium);
+}
+
+/* UI Elements */
+button {
+  display: inline-block;
+  border: none;
+  border-radius: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--color-darker);
+  color: var(--color-lighter);
+
+  font-family: var(--font-secondary);
+  font-size: var(--font-xsmall);
+  font-weight: 700;
+  line-height: var(--font-small);
+
+  padding: var(--font-xsmall);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+input[type=text] {
+  box-sizing: border-box;
+  width: 250px;
+  height: 2rem;
+  padding: 0.5rem;
+  text-align: left;
+  background-color: var(--color-lighter);
+  border-color: var(--color-light);
+  color: var(--color-dark);
+}
+
+
+
+/*! Menu */
+
+nav{
+  display: flex;
+  padding: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-light);
+}
+
+nav a {
+  color: var(--color-darker);
+  text-decoration: none;
+
+  font-family: var(--font-primary);
+  font-size: var(--font-xlarge);
+  font-weight: 600;
+  line-height: var(--font-xlarge);
+  text-transform: uppercase;
+
+  margin: var(--font-medium);
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul li a {
+    color: var(--color-dark);
+    text-decoration: none;
+  
+    font-family: var(--font-primary);
+    font-size: var(--font-small);
+    font-weight: 400;
+    line-height: var(--font-xlarge);
+    text-transform: uppercase;
+}
+
+nav button {
+    color: var(--color-light);
+    background-color: var(--color-darker);
+    margin: 1rem;
+}
+
+
+
+/*! Header */
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 80vh;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--color-lighter);
+}
+
+.header_text {
+  width: 40vw;
+  min-width: 300px;
+}
+
+.header_text h1 {
+  color: var(--color-darker);
+}
+
+.header_text p {
+  color: var(--color-dark);
+}
+
+.header_graphics {
+  height: 35vw;
+  min-height: 300px;
+  background-color: var(--color-darker);
+  border-radius: 1rem;
+}
+
+header img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 1rem;
+}
+
+header button {
+  margin-top: 1rem;
+}
+
+
+
+/*! Advantages Section */
+
+#advantages {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: var(--font-small);
+
+  max-width: 100%;
+  min-height: 50vh;
+  padding: var(--font-large);
+  padding-top: 5rem;
+
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--color-light);
+}
+
+#advantages h2 {
+  color: var(--color-darker);
+  font-size: var(--font-xxlarge);
+  margin-bottom: 2rem;
+}
+
+.advantages_cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.advantages_card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: var(--font-medium);
+
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--color-dark);
+  min-height: 30rem;
+  width: 20rem;
+  padding: 1%;
+  background-color: var(--color-light);
+}
+
+.advantages_card_graphics {
+  width: 70%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.advantages_card img {
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 1rem;
+}
+
+.advantages_card_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+
+
+/*! Product section */
+
+#product {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  padding: 3rem;
+  column-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--color-lighter);
+}
+
+#product h2 {
+  color: var(--color-darker);
+  font-size: var(--font-xxlarge);
+  margin-bottom: 2rem;
+}
+
+.product_graphics {
+  width: 50%;
+  height: 30rem;
+  overflow: hidden;
+  display: grid;
+  place-content: center;
+  border-radius: 1rem;
+}
+
+.product_graphics img {
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 1rem;
+}
+
+.product_text {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+}
+
+
+
+/*! Highlight section */
+
+.highlight {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  row-gap: 3rem;
+  padding-bottom: 3rem;
+
+  background-color: var(--color-light);
+}
+
+.highlight h2 {
+  color: var(--color-darker);
+  font-size: var(--font-xxlarge);
+  padding: 3rem;
+  text-align: justify;
+}
+
+.highlight_small_cards {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  column-gap: 10%;
+  height: 10rem;
+}
+
+.highlight_small_cards div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  row-gap: 10%;
+
+  background-color: var(--color-lighter);
+  border-radius: 1rem;
+}
+
+
+/*! Team section */
+
+#team {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--color-lighter);
+}
+
+#team h2 {
+  color: var(--color-darker);
+  font-size: var(--font-xxlarge);
+}
+
+#team article {
+  width: 100%;
+  display: flex;
+  column-gap: 2rem;
+}
+
+.team_graphics {
+  width: 50%;
+  height: 30rem;
+  overflow: hidden;
+  display: grid;
+  place-content: center;
+  border-radius: 1rem;
+}
+
+.team_graphics img {
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 1rem;
+}
+
+.team_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  row-gap: 2rem;
+}
+
+#team article:nth-child(3) {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  column-gap: 2rem;
+}
+
+
+input[type=button] {
+  box-sizing: border-box;
+  width: 250px;
+  height: 2.5rem;
+  padding: 0.8rem;
+  margin: 0.2rem;
+  align-self: center;
+  text-align: center;
+
+  background-color: var(--color-lighter);
+  border-color: var(--color-light);
+  color: var(--color-dark);
+
+  border: none;
+  border-radius: 0.5rem;
+}
+
+
+
+/*! Contact Section */
+
+
+#contact {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  padding: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  width: 100%;
+  grid-gap: 2rem;
+}
+
+.form_group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form_group button {
+  align-self: flex-start;
+  margin: none;
+}
+
+#contact_form div:nth-child(3) {
+  grid-column: 1 / -1;
+}
+
+#contact_form textarea {
+  height: 5rem;
+}
+
+
+/* Footer */
+footer {
+  display: flex;
+  padding: 5vh 2rem;
+  align-items: top;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: var(--color-darker);
+}
+
+footer h2, footer h3{
+  color: var(--color-lighter);
+}
+
+footer a {
+  color: var(--color-light);
+  font-family: var(--font-secondary);
+  font-size: var(--font-xsmall);
+  font-weight: 700;
+  line-height: var(--font-small);
+}
+
+footer section {
+  display: flex;
+  max-width: 50vw;
+  align-items: top;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer section div {
+  margin: 0px 1rem 1rem 1rem;
+}
